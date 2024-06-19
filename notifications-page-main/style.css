@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    --cl-primary: hsl(219, 78%, 40%);
+    --cl-primary-dark: hsl(224, 21%, 14%);
+    --cl-secondary: hsl(1, 90%, 64%);
+    --cl-white: hsl(0, 0%, 100%);
+    --cl-black: hsl(0, 0%, 14%);
+    --cl-bg-unread: hsl(210, 60%, 98%); 
+    --cl-bg-main: hsl(210, 60%, 98%);
+    --cl-text-primary: hsl(0, 0%, 59%);
+    
+    --ff-main: "Plus Jakarta Sans", sans-serif;
+    --fs-main: 16px;
+}
+
+body {
+    font-family: var(--ff-main);
+    font-size: var(--fs-main);
+    color: var(--cl-text-primary);
+    background-color: var(--cl-bg-main);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--cl-black);
+    margin-bottom: 0;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: var(--fs-main);
+    font-weight: 900;
+    display: inline;
+    transition: color 0.2s;
+    
+    &:hover {
+        cursor: pointer;
+        color: var(--cl-primary);
+    }
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    color: var(--cl-text-primary);
+    display: flex;
+    align-items: end;
+    transition: color 0.2s;
+    font-weight: 500;
+
+    &:hover {
+        color: var(--cl-primary-dark);
+    }
+}
+
+.container {
+    max-width: 740px;
+}
+
+.app {
+    min-height: 80vh;
+    background-color: var(--cl-white);
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-block: 2.5rem;
+}
+
+#notifications-amount {
+    padding: 2px 12px;
+    background-color: var(--cl-primary);
+    border-radius: 5px;
+    color: var(--cl-white);
+    font-weight: 700;
+}
+
+.message {
+    border-radius: 10px;
+    padding-inline: 1.5rem;
+    padding-block: 1rem;
+    display: flex;
+    align-items: start;
+    gap: 0.75rem;
+    cursor: pointer;
+    
+    &:not(:last-child) {
+        margin-block-end: 12px;
+    }
+
+    &.unread {
+        background-color: var(--cl-bg-unread);
+
+        & p {
+            position: relative;
+
+            &::after {
+                --w: 8px;
+        
+                content: "";
+                position: absolute;
+                right: -20px;
+                top: calc((100% - var(--w)) / 2);
+                width: var(--w);
+                aspect-ratio: 1;
+                background-color: var(--cl-secondary);
+                border-radius: 50%;
+            }
+        }
+    }
+
+    & p {
+        display: inline;
+        font-weight: 500;
+        margin-inline: 5px;
+    }
+
+    & img {
+        width: 50px;
+        height: 50px;
+    }
+
+    & strong {
+        transition: color 0.2s;
+        color: var(--cl-black);
+
+        &.highlighted {
+            color: var(--cl-primary);
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: var(--cl-primary);
+        }
+    }       
+
+    .reply {
+        border: 1px solid rgb(218, 218, 218);
+        padding: 1rem;
+        border-radius: 5px;
+        transition: all 0.2s;
+
+        &:hover {
+            background-color: hsl(211, 68%, 94%);
+            color: var(--cl-primary);
+            border: 1px solid transparent;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .app {
+        margin: 0;
+        border-radius: 0;
+    }
+    
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    .unread p::after {
+        display: none;
+    }
+}
