@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            defer
+            src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"></script>
+        <script defer src="scripts/script.js"></script>
+
+        <link rel="stylesheet" href="css/bs5/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/plan.css" />
+        <title>CoffeeRoasters | Create your plan</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-between py-5">
+                        <div class="header-logo">
+                            <a href="index.html">
+                                <img src="assets/shared/desktop/logo.svg" alt="Logo" />
+                            </a>
+                        </div>
+                        <button id="mm-open-menu" class="d-block d-sm-none"></button>
+                        <nav class="d-none d-sm-block">
+                            <ul class="d-flex align-items-center gap-sm-4 gap-md-5">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="plan.html">Create your plan</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section id="plan-hero" class="hero">
+                <div class="container">
+                    <div class="outer">
+                        <div class="row">
+                            <div class="inner col-12 d-flex justify-content-center justify-content-md-start">
+                                <div class="text-center text-md-start">
+                                    <h2 class="text-white-primary">Create plan</h2>
+                                    <p class="text-white-secondary">
+                                        Coffee the way you wanted it to be. For coffee delivered tomorrow, or next week.
+                                        For whatever brew method you use. For choice, for convenience, for quality.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="plan-steps">
+                <div class="container">
+                    <div class="outer">
+                        <div class="row">
+                            <div class="inner col-12">
+                                <div class="row indicator d-none d-md-flex mb-3" data-theme="dark">
+                                    <div class="col-4">
+                                        <div class="bullet"></div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="bullet"></div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="bullet"></div>
+                                    </div>
+                                </div>
+                                <div class="row gap-3 gap-md-0">
+                                    <div class="step col-md-4 pe-3">
+                                        <div class="number" data-theme="dark">01</div>
+                                        <h4>Pick your coffee</h4>
+                                        <p class="text-white-secondary">
+                                            Select from our evolving range of artisan coffees. Our beans are ethically
+                                            sourced and we pay fair prices for them. There are new coffees in all
+                                            profiles every month for you to try out.
+                                        </p>
+                                    </div>
+                                    <div class="step col-md-4 pe-3">
+                                        <div class="number" data-theme="dark">02</div>
+                                        <h4>Choose the frequency</h4>
+                                        <p class="text-white-secondary">
+                                            Select from our evolving range of artisan coffees. Our beans are ethically
+                                            sourced and we pay fair prices for them. There are new coffees in all
+                                            profiles every month for you to try out.
+                                        </p>
+                                    </div>
+                                    <div class="step col-md-4 pe-3">
+                                        <div class="number" data-theme="dark">03</div>
+                                        <h4>Receive and enjoy!</h4>
+                                        <p class="text-white-secondary">
+                                            We ship your package within 48 hours, freshly roasted. Sit back and enjoy
+                                            award-winning world-class coffees curated to provide a distinct tasting
+                                            experience.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="create-plan">
+                <div class="container">
+                    <div class="outer">
+                        <div class="row">
+                            <div class="inner col-12">
+                                <div class="row">
+                                    <div class="col-4 d-none d-lg-block pe-5">
+                                        <nav>
+                                            <ul>
+                                                <li>
+                                                    <a href="#preferences" class="plan-nav-link active">
+                                                        <span>01</span> Preferences
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#bean-type" class="plan-nav-link">
+                                                        <span>02</span> Bean Type
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#quantity" class="plan-nav-link">
+                                                        <span>03</span> Quantity
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#grind-option" class="plan-nav-link">
+                                                        <span>04</span>Grind Option
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#deliveries" class="plan-nav-link">
+                                                        <span>05</span> Deliveries
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <div class="col-lg-8 d-flex flex-column gap-5">
+                                        <div id="preferences" class="col-12">
+                                            <div class="plan-element-header">
+                                                <h2>How do you drink your coffee?</h2>
+                                            </div>
+                                            <div class="plan-element-collapse row gap-3 gap-md-0">
+                                                <div class="col-md-4 d-flex">
+                                                    <div class="option" data-cat="preferences" data-option="capsule">
+                                                        <h4>Capsule</h4>
+                                                        <p>Compatible with Nespresso systems and similar brewers</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 d-flex">
+                                                    <div class="option" data-cat="preferences" data-option="filter">
+                                                        <h4>Filter</h4>
+                                                        <p>
+                                                            For pour over or drip methods like Aeropress, Chemex, and
+                                                            V60
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 d-flex">
+                                                    <div class="option" data-cat="preferences" data-option="espresso">
+                                                        <h4>Espresso</h4>
+                                                        <p>
+                                                            Dense and finely ground beans for an intense, flavorful
+                                                            experience
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="bean-type" class="col-12">
+                                            <div class="plan-element-header">
+                                                <h2>What type of coffee?</h2>
+                                            </div>
+                                            <div class="plan-element-collapse row gap-3 gap-md-0">
+                                                <div class="col-md-4 d-flex">
+                                                    <div class="option" data-cat="type" data-option="single origin">
+                                                        <h4>Single Origin</h4>
+                                                        <p>
+                                                            Distinct, high quality coffee from a specific family-owned
+                                                            farm
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 d-flex">
+                                                    <div class="option" data-cat="type" data-option="decaf">
+                                                        <h4>Decaf</h4>
+                                                        <p>
+                                                            Just like regular coffee, except the caffeine has been
+                                                            removed
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 d-flex">
+                                                    <div class="option" data-cat="type" data-option="blended">
+                                                        <h4>Blended</h4>
+                                                        <p>
+                                                            Combination of two or three dark roasted beans of organic
+                                                            coffees
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="quantity" class="col-12">
+                                            <div class="plan-element-header">
+                                                <h2>How much would you like?</h2>
+                                            </div>
+                                            <div class="plan-element-collapse row gap-3 gap-md-0">
+                                                <div class="col-md-4 d-flex">
+                                                    <div class="option" data-cat="quantity" data-option="250g">
+                                                        <h4>250g</h4>
+                                                        <p>
+                                                            Perfect for the solo drinker. Yields about 12 delicious
+                                                            cups.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 d-flex">
+                                                    <div class="option" data-cat="quantity" data-option="500g">
+                                                        <h4>500g</h4>
+                                                        <p>
+                                                            Perfect option for a couple. Yields about 40 delectable
+                                                            cups.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 d-flex">
+                                                    <div class="option" data-cat="quantity" data-option="1000g">
+                                                        <h4>1000g</h4>
+                                                        <p>
+                                                            Perfect for offices and events. Yields about 90 delightful
+                                                            cups.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="grind-option" class="col-12">
+                                            <div class="plan-element-header">
+                                                <h2>Want us to grind them?</h2>
+                                            </div>
+                                            <div class="plan-element-collapse row gap-3 gap-md-0">
+                                                <div class="col-md-4 d-flex">
+                                                    <div class="option" data-cat="grind-option" data-option="wholebean">
+                                                        <h4>Wholebean</h4>
+                                                        <p>Best choice if you cherish the full sensory experience</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 d-flex">
+                                                    <div class="option" data-cat="grind-option" data-option="filter">
+                                                        <h4>Filter</h4>
+                                                        <p>
+                                                            For drip or pour-over coffee methods such as V60 or
+                                                            Aeropress
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 d-flex">
+                                                    <div class="option" data-cat="grind-option" data-option="cafetiére">
+                                                        <h4>Cafetiére</h4>
+                                                        <p>
+                                                            Course ground beans specially suited for french press coffee
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="deliveries" class="col-12">
+                                            <div class="plan-element-header">
+                                                <h2>How often should we deliver?</h2>
+                                            </div>
+                                            <div class="plan-element-collapse row gap-3 gap-md-0">
+                                                <div class="col-md-4 d-flex">
+                                                    <div class="option" data-cat="deliveries" data-option="every week">
+                                                        <h4>Every week</h4>
+                                                        <p>$7.20 per shipment. Includes free first-class shipping.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 d-flex">
+                                                    <div
+                                                        class="option"
+                                                        data-cat="deliveries"
+                                                        data-option="every 2 weeks">
+                                                        <h4>Every 2 weeks</h4>
+                                                        <p>$9.60 per shipment. Includes free priority shipping.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 d-flex">
+                                                    <div class="option" data-cat="deliveries" data-option="every month">
+                                                        <h4>Every month</h4>
+                                                        <p>$12.00 per shipment. Includes free priority shipping.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="order-summary">
+                <div class="container">
+                    <div class="outer">
+                        <div class="row">
+                            <div class="inner col-12">
+                                <h2 class="text-white-secondary">Order summary</h2>
+                                <p>
+                                    "I drink my coffee as
+                                    <span class="sum-item" data-order-val="preferences">_____</span>, with a
+                                    <span class="sum-item" data-order-val="type">_____</span> type of bean.
+                                    <span class="sum-item" data-order-val="quantity">_____</span> ground ala
+                                    <span class="sum-item" data-order-val="grind-option">_____</span>, sent to me
+                                    <span class="sum-item" data-order-val="deliveries">_____</span>."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-12 d-flex justify-content-end">
+                            <button class="cta cta-primary" id="summarize-plan">Create my plan!</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div id="order-summary-popup" class="checkout-overlay">
+                <div class="popup-display">
+                    <div class="popup-header">
+                        <h4 class="m-0 text-white-primary">Order Summary</h4>
+                    </div>
+                    <div class="popup-content">
+                        <div class="plan">
+                            <p>
+                                "I drink my coffee as <span class="sum-item" data-order-val="preferences">_____</span>,
+                                with a <span class="sum-item" data-order-val="type">_____</span> type of bean.
+                                <span class="sum-item" data-order-val="quantity">_____</span> ground ala
+                                <span class="sum-item" data-order-val="grind-option">_____</span>, sent to me
+                                <span class="sum-item" data-order-val="deliveries">_____</span>."
+                            </p>
+                        </div>
+                        <p>
+                            Is this correct? You can proceed to checkout or go back to plan selection if something is
+                            off. Subscription discount codes can also be redeemed at the checkout.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center gap-3">
+                            <span class="price">$14.00/mo</span>
+                            <button class="cta cta-primary flex-grow-1 text-center" id="to-checkout">Checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="outer">
+                    <div class="row">
+                        <div class="inner col-12">
+                            <div class="row gap-5 gap-lg-0">
+                                <a
+                                    href="index.html"
+                                    class="col-lg-3 d-flex justify-content-center justify-content-lg-start">
+                                    <img
+                                        src="assets/shared/desktop/logo footer.svg"
+                                        alt="Logo footer"
+                                        class="img-fluid" />
+                                </a>
+                                <div
+                                    class="col-lg-6 d-flex justify-content-center justify-content-lg-start ps-0 ps-lg-5">
+                                    <nav>
+                                        <ul class="d-flex gap-3">
+                                            <li><a href="index.html" class="footer-link">Home</a></li>
+                                            <li><a href="about.html" class="footer-link">About</a></li>
+                                            <li><a href="plan.html" class="footer-link">Create your plan</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="col-lg-3 d-flex justify-content-center justify-content-lg-end">
+                                    <ul class="d-flex gap-4">
+                                        <li>
+                                            <a href="#" class="social-platform">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                                                    <path
+                                                        fill="#FEFCF7"
+                                                        d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="social-platform"
+                                                ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="20">
+                                                    <path
+                                                        fill="#FEFCF7"
+                                                        d="M24 2.557a9.83 9.83 0 01-2.828.775A4.932 4.932 0 0023.337.608a9.864 9.864 0 01-3.127 1.195A4.916 4.916 0 0016.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 011.671 1.149a4.93 4.93 0 001.523 6.574 4.903 4.903 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 17.54a13.94 13.94 0 007.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0024 2.557z" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="social-platform">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                                                    <path
+                                                        fill="#FEFCF7"
+                                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,174 @@
+#plan-hero .outer {
+    background: url(../assets/plan/mobile/image-hero-blackcup.jpg);
+    background-position: center;
+    background-size: cover;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.307);
+}
+
+.plan-nav-link {
+    display: block;
+    border-bottom: 1px solid var(--cl-black-secondary);
+    padding-block: 1.25rem;
+    color: var(--cl-black-secondary);
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-4);
+    font-weight: 900;
+    transition: 0.2s ease;
+}
+
+.plan-nav-link span {
+    margin-right: 1.25rem;
+}
+
+.plan-nav-link:hover {
+    color: var(--cl-black);
+}
+
+.plan-nav-link.active span {
+    color: var(--cl-primary);
+}
+
+.plan-nav-link.active {
+    color: var(--cl-black);
+}
+
+#plan-steps .outer {
+    background-color: var(--cl-secondary);
+}
+
+#plan-steps h4 {
+    max-width: 9ch;
+    letter-spacing: 1px;
+    color: var(--cl-white);
+}
+.plan-element-header {
+    margin-block-end: 1.25rem;
+}
+
+.plan-element-header h2 {
+    width: 100%;
+    color: var(--cl-grey);
+    position: relative;
+    cursor: pointer;
+}
+
+.plan-element-header h2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    aspect-ratio: 1;
+    background-image: url("data:image/svg+xml,%3Csvg height='800px' width='800px' version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 185.344 185.344' xml:space='preserve'%3E%3Cpath style='fill:%230e8784;' d='M92.672,144.373c-2.752,0-5.493-1.044-7.593-3.138L3.145,59.301c-4.194-4.199-4.194-10.992,0-15.18 c4.194-4.199,10.987-4.199,15.18,0l74.347,74.341l74.347-74.341c4.194-4.199,10.987-4.199,15.18,0 c4.194,4.194,4.194,10.981,0,15.18l-81.939,81.934C98.166,143.329,95.419,144.373,92.672,144.373z'/%3E%3C/svg%3E");
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.plan-element-collapse .option {
+    width: 100%;
+    background-color: #f4f1eb;
+    padding-inline: 1.5rem;
+    padding-block-start: 2.5rem;
+    padding-block-end: 2.5rem;
+    border-radius: var(--radius);
+    align-self: stretch;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out;
+}
+
+.plan-element-collapse .option:hover {
+    background-color: #fdd6ba;
+}
+
+.plan-element-collapse .option.active {
+    background-color: var(--cl-primary);
+    color: var(--cl-white-secondary);
+}
+
+.plan-element-collapse .option h4 {
+    color: var(--cl-secondary);
+    margin-block-end: 0.75rem;
+}
+
+.plan-element-collapse .option.active h4 {
+    color: var(--cl-white);
+}
+
+#order-summary .outer {
+    background-color: var(--cl-secondary);
+}
+
+#order-summary h2 {
+    font-size: var(--fs-5);
+    font-family: var(--ff-primary);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#order-summary p {
+    font-size: var(--fs-2);
+    color: var(--cl-white);
+    font-family: var(--ff-secondary);
+    font-weight: 900;
+}
+
+.sum-item {
+    color: var(--cl-primary);
+}
+
+#order-summary-popup {
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+:is(.popup-header, .popup-content) {
+    padding-inline: 2.25rem;
+    padding-block: 2rem;
+}
+
+.popup-display {
+    border-radius: var(--radius);
+    overflow: hidden;
+    max-width: 400px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.popup-header {
+    background-color: var(--cl-secondary);
+}
+
+.popup-content {
+    background-color: var(--cl-white);
+}
+
+.popup-content > p {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+.popup-content .plan p {
+    font-size: 1.25rem;
+    color: var(--cl-grey);
+    font-family: var(--ff-secondary);
+    font-weight: 900;
+}
+
+.popup-content .price {
+    font-family: var(--ff-secondary);
+    font-weight: 900;
+    color: var(--cl-black);
+    font-size: var(--fs-4);
+}
+
+@media (max-width: 768px) {
+    .plan-element-header h2 { font-size: 20px; }
+}

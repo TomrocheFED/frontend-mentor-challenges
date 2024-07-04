@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --cl-primary: #0e8784;
+    --cl-primary-hover: #66d2cf;
+    --cl-primary-disabled: #e2dedb;
+    --cl-secondary: #333d4b;
+    --cl-tertiary: #fdd6ba;
+    --cl-white: #ffffff;
+    --cl-white-secondary: #fefcf7cc;
+    --cl-black: #323232;
+    --cl-black-secondary: #32323260;
+    --cl-grey: #83888f;
+    --cl-bg-cream: #fefcf7;
+
+    --ff-primary: "Barlow", sans-serif;
+    --ff-secondary: "Fraunces", serif;
+
+    --fs-xxl: 150px;
+    --fs-1: 72px;
+    --fs-2: 40px;
+    --fs-3: 32px;
+    --fs-4: 24px;
+    --fs-main: 18px;
+    --fs-xs: 13px;
+
+    --radius: 6px;
+    --transition: 0.2s ease-out;
+    --section-spacing: 125px;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --fs-1: 48px;
+        --fs-2: 30px;
+        --fs-main: 15px;
+        --section-spacing: 75px;
+    }
+
+    #plan-steps .step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #plan-steps .number {
+        font-size: 72px;
+    }
+    
+}
+
+@media (max-width: 576px) {
+    :root {
+        --fs-1: 40px;
+    }
+}
+
+body {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-main);
+    color: var(--cl-secondary);
+}
+
+section { margin-block-end: var(--section-spacing); }
+section .outer { padding-inline: 50px; border-radius: var(--radius); }
+section .inner { padding-block: 50px; }
+section.hero .inner { padding-block: 100px }
+
+h1,
+h2,
+h3,
+h4 { font-family: var(--ff-secondary); font-weight: 900; }
+h1 { font-size: var(--fs-1); max-width: 11ch; line-height: 1; }
+h2 { font-size: var(--fs-2); }
+h3 { font-size: var(--fs-3); }
+h4 { font-size: var(--fs-4); }
+a { text-decoration: none; }
+ul { list-style: none; padding: 0; margin: 0; }
+.hero p { max-width: 45ch; }
+.container { max-width: 1280px; }
+
+/* Buttons */
+.cta {
+    font-family: var(--ff-secondary);
+    font-weight: 900;
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: var(--transition);
+    border: none;
+}
+.cta-primary { background-color: var(--cl-primary); color: var(--cl-white); }
+.cta-primary:hover { background-color: var(--cl-primary-hover); }
+
+/* Header */
+header nav a,
+footer nav a {
+    font-size: var(--fs-xs);
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--cl-grey);
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+header nav a:hover {
+    color: var(--cl-black);
+}
+
+#mm-open-menu {
+    width: 30px;
+    aspect-ratio: 1;
+    background-image: url(../assets/shared/mobile/icon-hamburger.svg);
+    background-size: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+}
+
+/* Footer */
+footer .outer {
+    background-color: var(--cl-secondary);
+    color: var(--cl-white);
+    padding-inline: 50px;
+    margin-block-end: 25px;
+}
+footer .inner { padding-block: 25px; }
+footer nav a:hover { color: var(--cl-tertiary); }
+footer .social-platform svg path { transition: 0.2s ease; }
+footer .social-platform:hover svg path { fill: var(--cl-tertiary) }
+
+/* Steps plan */ 
+.indicator { position: relative; }
+.indicator[data-theme="dark"]::after { background-color: var(--cl-tertiary); } 
+.indicator::after {
+    content: "";
+    position: absolute;
+    left: 4%;
+    right: 30%;
+    height: 2px;
+    top: calc(50% - 1px);
+}
+
+.indicator .bullet {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+}
+.indicator[data-theme="dark"] .bullet { border: 2px solid var(--cl-primary); }
+.number { font-size: var(--fs-1); font-family: var(--ff-secondary); font-weight: 900; }
+.number[data-theme="dark"] { color: var(--cl-tertiary); }
+
+/* Overall classes */
+.text-white-primary { color: var(--cl-white); }
+.text-white-secondary { color: var(--cl-white-secondary); }
+.text-black-primary { color: var(--cl-black); }
+.text-black-secondary { color: var(--cl-black-secondary); }

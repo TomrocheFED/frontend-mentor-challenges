@@ -1,0 +1,105 @@
+#hero .outer {
+    background: url(../assets/home/mobile/image-hero-coffeepress.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#collection .inner {
+    position: relative;
+}
+
+#collection h2 {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    position: absolute;
+    z-index: -1;
+    top: -50px;
+    left: 0;
+    right: 0;
+    font-size: clamp(28px, 12vw, 150px);
+    background: linear-gradient(to bottom, gray, transparent);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    cursor: pointer;
+}
+
+.product img { transition: 0.2s ease; }
+
+.product:hover img {
+    transform: translateY(-5px);
+}
+
+#benefits .outer {
+    position: relative;
+}
+
+#benefits .outer::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 70%;
+    border-radius: var(--radius);
+    background-color: var(--cl-secondary);
+    z-index: -1;
+}
+
+#benefits .inner .col-12:first-child p {
+    max-width: 45ch;
+}
+
+.row:has(.benefit) {
+    margin-block-start: 2rem;
+}
+
+.benefit > div {
+    background-color: var(--cl-primary);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding-block-start: 50px;
+    padding-block-end: 30px;
+    padding-inline: 2rem;
+    text-align: center;
+    height: 100%;
+}
+
+.benefit img {
+    max-width: 50px;
+}
+
+#plan-steps h2 {
+    font-size: var(--fs-4);
+    color: var(--cl-grey);
+    margin-block-end: 2rem;
+}
+
+@media (max-width: 768px) {
+    #collection { margin-block-start: 200px; }
+    #collection h2 { top: -100px; }
+    #benefits .outer::after { height: 60%; }
+}
+@media (min-width: 768px) {
+    #hero .outer { background: url(../assets/home/tablet/image-hero-coffeepress.jpg); background-position: top right; }
+    .benefit > div { flex-direction: row; gap: 2rem; }
+    #benefits .outer::after { height: 65%; }
+}
+@media (min-width: 992px) {
+    #hero .outer { background: url(../assets/home/desktop/image-hero-coffeepress.jpg); }
+    .benefit > div { flex-direction: column; gap: 0; }
+    #benefits .outer::after { height: 70%; }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .product { flex-direction: row; align-items: center; }
+    .product img { max-width: 25%; }
+}

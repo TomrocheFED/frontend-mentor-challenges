@@ -1,0 +1,43 @@
+#about-hero .outer {
+    background-image: url(../assets/about/mobile/image-hero-whitecup.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#commitment .commitment-image {
+    min-height: 350px;
+    background-image: url(../assets/about/mobile/image-commitment.jpg);
+    background-position: top;
+    background-size: cover;
+    border-radius: var(--radius);
+}
+
+#quality .outer {
+    background-color: var(--cl-secondary);
+    margin-block-start: 100px;
+}
+
+#quality .quality-image {
+    min-height: 350px;
+    background-image: url(../assets/about/mobile/image-quality.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius);
+    position: relative;
+    top: -100px;
+}
+
+#headquarters h2 { 
+    color: var(--cl-grey);
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    #about-hero .outer { background-image: url(../assets/about/tablet/image-hero-whitecup.jpg); }
+    #commitment .commitment-image { background-image: url(../assets/about/tablet/image-commitment.jpg); }
+    #quality .quality-image { background-image: url(../assets/about/tablet/image-quality.jpg) }
+}
+@media (min-width: 992px) {
+    #about-hero .outer { background-image: url(../assets/about/desktop/image-hero-whitecup.jpg); }
+    #commitment .commitment-image { background-image: url(../assets/about/desktop/image-commitment.jpg); }
+    #quality .quality-image { background-image: url(../assets/about/desktop/image-quality.jpg) }
+}
